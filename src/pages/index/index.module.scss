@@ -5,9 +5,15 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    // justify-content: center;
     align-items: center;
-    // padding: 100px 100px;   
+
+    .content {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 106px;
+      }
 
     .heading {
         margin-top: 50px;
@@ -21,11 +27,16 @@
         align-items: flex-end;
 
         .listItem {
-            margin: 100px 50px 0px 50px;
+            height: min-content;
+            margin: 50px 50px 0px 50px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            img {
+                max-width: 200px;
+            }
 
             h1 {
                 font-family: Gloria Hallelujah;

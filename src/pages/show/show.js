@@ -25,7 +25,7 @@ const Show = (props) => {
 
     return (
         <div className={styles.fullPage}>
-            <div className="content">
+            <div className={styles.content}>
                 <div className={styles.bunDetails}>
                     <div className={styles.listItem}>
                         <img src={image} alt={`${props.match.params.type}`}></img>

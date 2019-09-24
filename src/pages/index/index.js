@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 const Index = () => {
     return (
         <div className={styles.fullPage}>
-            <div className="content">
+            <div className={styles.content}>
                 <div className={styles.heading}>What <u>flavor</u> would you like?</div>
                 <div className={styles.row}>
                     <Link to={"/order/original"}>

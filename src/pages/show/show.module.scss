@@ -7,7 +7,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // padding: 100px 100px; 
+
+    .content {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 300px;
+    }
 }
 
 .listItem {
@@ -33,6 +40,7 @@ button {
     mix-blend-mode: normal;
     border-radius: 123px;
     font-size: 4em;
+    line-height: 1em;
 }
 
 .navigationFooter {

@@ -13,7 +13,6 @@ const Home = () => {
         let tweenButton = new TweenMax.fromTo('#order-now', 0.3, { transform: 'translateY(40px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 });
         let tweenText = new TweenMax.fromTo('h1', 0.3, { transform: 'translateY(40px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 });
         mainTimeline.add(tweenText, 0.75).add(tweenButton, 1);
-            return true
 	}, [])
 
 

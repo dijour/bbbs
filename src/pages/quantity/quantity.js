@@ -9,7 +9,7 @@ import chocolate from '../../assets/chocolate-glaze.svg';
 import { Link } from "react-router-dom";
 
 
-const Glaze = (props) => {
+const Quantity = (props) => {
     return (
         <div className={styles.fullPage}>
             <div className={glazeStyles.content}>
@@ -53,4 +53,4 @@ const Glaze = (props) => {
     )
 }
 
-export default Glaze;
+export default Quantity;

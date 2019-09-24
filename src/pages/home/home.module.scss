@@ -21,15 +21,9 @@
     h1 {
         font-family: Gloria Hallelujah;
         font-size: 5em;
-        // line-height: 285px;
         letter-spacing: 0.08em;
         color: #D07D13;
         text-shadow: -3px 0 brown, 0 3px red, 3px 0 orange, 0 -3px black;
-        // -webkit-animation-name: floatUp; /* Safari 4.0 - 8.0 */
-        // -webkit-animation-duration: 1s; /* Safari 4.0 - 8.0 */
-        // animation-name: floatUp;
-        // animation-duration: 1s;
-        // transition-timing-function: ease-in-out;
     }
 
     button {
@@ -37,33 +31,11 @@
         width: 400px;
         height: 100px;
         color: white;       
-        // position: absolute;
         background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 100%), #CE790B;
         mix-blend-mode: normal;
         border-radius: 123px;
         font-size: 3em;
-        // top: 50%;
-        // left: 50%;
-        // margin-right: -50%;
-        // transform: translate(-50%, -50%);
         text-align: center;
-        // -webkit-animation-name: floatUp; /* Safari 4.0 - 8.0 */
-        // -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
-        // animation-name: floatUp;
-        // animation-duration: 2s;
-        // animation-delay: 2s;
-        // transition-timing-function: ease-in-out;
     }
 
 }
-
-@-webkit-keyframes floatUp {
-    from {margin-top: 1000px; opacity: 0}
-    to {margin-top: 0px; opacity: 100%}
-  }
-  
-  /* Standard syntax */
-  @keyframes floatUp {
-    from {margin-top: 1000px; opacity: 0}
-    to {margin-top: 0px; opacity: 1}
-  }

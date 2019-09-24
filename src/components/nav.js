@@ -3,17 +3,11 @@ import styles from './nav.module.scss';
 import roll from '../../src/assets/cr.svg'
 import order from '../../src/assets/order.svg'
 import bag from '../../src/assets/bag.svg'
-import classNames from 'classnames';
 import { withRouter, Link } from "react-router-dom";
 
 const Nav = (props) => {
-    // const [age, setAge] = useState(19)
-
-    console.log(props.location.pathname === "/")
-
     return (
         <div className={styles.nav}>
-
             <div className={styles.leftBlock}>
                 <Link to={"/"}>
                     <img src={roll} className={props.location.pathname === "/" ? styles.active : ""} alt="cinnamon-roll"/>
