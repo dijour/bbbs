@@ -1,0 +1,16 @@
+.nav {
+    padding: 24px 24px;
+    background-color: white;
+    border: black 1px solid;
+    display: flex;
+    justify-content: space-between;
+
+    .active {
+        border-bottom: 2px solid orange;
+    }
+}
+
+.leftBlock {
+    background-color: white;
+}
+
