@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import Home from '../src/pages/home/home'
-import Index from '../src/pages/index/index'
-import Cart from '../src/pages/cart/cart'
-import Nav from '../src/components/nav.js'
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Home from '../src/pages/home/home';
+import Index from '../src/pages/index/index';
+import Cart from '../src/pages/cart/cart';
+import Show from '../src/pages/show/show';
+import Nav from '../src/components/nav.js';
 
 
 function App() {
@@ -14,7 +14,8 @@ function App() {
       <Router>
         <Nav/>
         <Route path="/" exact component={Home} />
-        <Route path="/index/" component={Index} />
+        <Route exact path="/order/" component={Index} />
+        <Route path="/order/:type" component={Show} />
         <Route path="/cart/" component={Cart} />
       </Router>
     </div>

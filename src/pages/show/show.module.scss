@@ -1,0 +1,45 @@
+.fullPage {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // padding: 100px 100px; 
+}
+
+.listItem {
+    margin: 100px 50px 0px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 500px;
+
+    h1 {
+        font-family: Gloria Hallelujah;
+    }
+}
+
+button {
+    font-family: Gloria Hallelujah;
+    width: 400px;
+    height: 167px;
+    color: white;       
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 100%), #CE790B;
+    mix-blend-mode: normal;
+    border-radius: 123px;
+    font-size: 4em;
+}
+
+.navigationFooter {
+    left: 0;
+    position: absolute;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    width: 100%;
+}
