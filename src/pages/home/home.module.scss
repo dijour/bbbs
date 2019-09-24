@@ -1,0 +1,41 @@
+.fullPage {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-image: url('../../assets/Cinnamon-Buns.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    -webkit-filter: blur(5px); /* Safari 6.0 - 9.0 */
+    filter: blur(5px);
+}
+
+.heroText {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    h1 {
+        font-family: Gloria Hallelujah;
+        font-size: 144px;
+        line-height: 285px;
+        letter-spacing: 0.08em;
+        color: #D07D13;
+        text-shadow: -3px 0 brown, 0 3px red, 3px 0 orange, 0 -3px black;
+    }
+
+    button {
+        font-family: Gloria Hallelujah;
+        width: 500px;
+        height: 167px;
+        color: white;       
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.45) 0%, rgba(255, 255, 255, 0) 100%), #CE790B;
+        mix-blend-mode: normal;
+        border-radius: 123px;
+        font-size: 5em;
+    }
+
+}
