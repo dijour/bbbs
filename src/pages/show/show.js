@@ -6,7 +6,7 @@ import caramelPecan from '../../assets/caramel-pecan.svg'
 import original from '../../assets/original.svg'
 import pumpkin from '../../assets/pumpkin-spice.svg'
 
-import { withRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 const Show = (props) => {
@@ -26,18 +26,30 @@ const Show = (props) => {
     return (
         <div className={styles.fullPage}>
             <div className="content">
-                <div className={styles.listItem}>
-                    <img src={image} alt={`${props.match.params.type}`}></img>
-                    <h1>{props.match.params.type}</h1>
+                <div className={styles.bunDetails}>
+                    <div className={styles.listItem}>
+                        <img src={image} alt={`${props.match.params.type}`}></img>
+                        <h1>{props.match.params.type}</h1>
+                    </div>
+                    <div className={styles.bunText}>
+                        <h1>Price: $3 per bun</h1>
+                        <h2>This is the best {props.match.params.type} bun you have ever tried. Hands down.</h2>
+                        <h3>Ingredients: </h3>
+                        <ul>
+                            <li>Sugar</li>
+                            <li>Sugar</li>
+                            <li>Sugar</li>
+                        </ul>
+                    </div>
                 </div>
+
                 <div className={styles.navigationFooter}>
-                    <Link to={`/order/${props.match.params.type}/quantity`}>
+                    <Link to={"/order"}>
                         <button>{`${`<-- Back`}`}</button>
                     </Link>
-                    <Link to={"/order"}>
+                    <Link to={`/order/${props.match.params.type}/glaze`}>
                         <button>{`${`Next -->`}`}</button>
                     </Link>
-                
                 </div>
             </div>
         </div>

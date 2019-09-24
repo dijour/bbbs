@@ -5,6 +5,7 @@ import Home from '../src/pages/home/home';
 import Index from '../src/pages/index/index';
 import Cart from '../src/pages/cart/cart';
 import Show from '../src/pages/show/show';
+import Glaze from '../src/pages/glaze/glaze';
 import Nav from '../src/components/nav.js';
 
 
@@ -15,7 +16,8 @@ function App() {
         <Nav/>
         <Route path="/" exact component={Home} />
         <Route exact path="/order/" component={Index} />
-        <Route path="/order/:type" component={Show} />
+        <Route exact path="/order/:type" component={Show} />
+        <Route path="/order/:type/:glaze" component={Glaze} />
         <Route path="/cart/" component={Cart} />
       </Router>
     </div>
