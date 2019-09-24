@@ -8,7 +8,6 @@ import Show from '../src/pages/show/show';
 import Glaze from '../src/pages/glaze/glaze';
 import Nav from '../src/components/nav.js';
 
-
 function App() {
   return (
     <div className="App">
