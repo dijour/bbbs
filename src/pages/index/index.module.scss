@@ -22,18 +22,18 @@
     }
 
     .box {
-        &:hover a:hover {
-            img {
-                opacity: 1;
-            }
-          }
+        // &:hover a:hover {
+        //     img {
+        //         opacity: 1;
+        //     }
+        //   }
         
-        &:hover a:not(:hover) {
-            opacity: 0.3;
-            img {
-                opacity:0.3;
-            }
-        }
+        // &:hover a:not(:hover) {
+        //     opacity: 0.3;
+        //     img {
+        //         opacity:0.3;
+        //     }
+        // }
         .row {
             display: flex;
             justify-content: center;
