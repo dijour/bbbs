@@ -21,27 +21,68 @@
         font-size: 6em;
     }
 
-    .row {
-        display: flex;
-        justify-content: center;
-        align-items: flex-end;
-
-        .listItem {
-            height: min-content;
-            margin: 50px 50px 0px 50px;
+    .box {
+        // &:hover a:hover {
+        //     img {
+        //         opacity: 1;
+        //     }
+        //   }
+        
+        // &:hover a:not(:hover) {
+        //     opacity: 0.3;
+        //     img {
+        //         opacity:0.3;
+        //     }
+        // }
+        .row {
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
+            align-items: flex-end;
 
-            img {
-                max-width: 200px;
+            a {
+                text-decoration: none;
             }
 
-            h1 {
-                font-family: Gloria Hallelujah;
+            .listItem {
+                height: min-content;
+                margin: 50px 50px 0px 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                // &:hover {
+                //     animation: float 1s;
+                // }
+
+                // transition: margin-bottom 1s;
+
+                img {
+                    max-width: 200px;
+                }
+
+                h1 {
+                    font-family: Gloria Hallelujah;
+                }
             }
         }
     }
 }
+
+// @keyframes float {
+//     from {
+//         // margin-top: 50px;
+//         // width: 100%; 
+//     }
+  
+//     to {
+//         // position: absolute;
+//         // display: inline-table;
+//         // margin-top: 100px;
+//         margin-bottom: 30px;
+//         // padding: px;
+//         // max-width: 300px;
+//         // width: 150%;
+//         // height: 150%
+//     }
+//   }
 
