@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import styles from '../index/index.module.scss';
-import glazeStyles from './glaze.module.scss';
+import styles from './quantity.module.scss';
+import glazeStyles from '../glaze/glaze.module.scss';
 import none from '../../assets/original.svg';
-import sugar from '../../assets/sugar-glaze.svg';
-import vanilla from '../../assets/vanilla-glaze.svg';
-import chocolate from '../../assets/chocolate-glaze.svg';
+import sum3 from '../../assets/3.svg';
+import sum6 from '../../assets/6.svg';
+import sum12 from '../../assets/12.svg';
 
 import { Link } from "react-router-dom";
 
@@ -12,41 +12,44 @@ import { Link } from "react-router-dom";
 const Quantity = (props) => {
     return (
         <div className={styles.fullPage}>
-            <div className={glazeStyles.content}>
-                <div className={styles.heading}>What <u>glaze</u> would you like?</div>
+            <div className={styles.content}>
+                <div className={styles.heading}>What <u>quantity</u> would you like?</div>
                 <div className={styles.row}>
-                    <Link to={`/order/${props.match.params.type}/none`}>
+                    <Link to={`/order/${props.match.params.type}/${props.match.params.glaze}/1`}>
                         <div className={styles.listItem}>
                             <img src={none} alt="none"></img>
-                            <h1>None</h1>
+                            <h1 className={styles.count}>1</h1>
+                            <h1 className={styles.price}>$3</h1>
                         </div>
                     </Link>   
-                    <Link to={`/order/${props.match.params.type}/vanilla`}>
+                    <Link to={`/order/${props.match.params.type}/${props.match.params.glaze}/3`}>
                         <div className={styles.listItem}>
-                        <img src={vanilla} alt="vanilla"></img>
-                            <h1>Vanilla Milk</h1>
+                        <img src={sum3} alt="3"></img>
+                            <h1 className={styles.count}>3</h1>
+                            <h1 className={styles.price}>$8</h1>                        </div>
+                    </Link>
+                    <Link to={`/order/${props.match.params.type}/${props.match.params.glaze}/6`}>
+                        <div className={styles.listItem}>
+                        <img src={sum6} alt="6"></img>
+                            <h1 className={styles.count}>6</h1>
+                            <h1 className={styles.price}>$15</h1>  
                         </div>
                     </Link>
-                    <Link to={`/order/${props.match.params.type}/sugar`}>
+                    <Link to={`/order/${props.match.params.type}/${props.match.params.glaze}/12`}>
                         <div className={styles.listItem}>
-                        <img src={sugar} alt="sugar-milk"></img>
-                            <h1>Sugar Milk</h1>
-                        </div>
-                    </Link>
-                    <Link to={`/order/${props.match.params.type}/chocolate`}>
-                        <div className={styles.listItem}>
-                        <img src={chocolate} alt="chocolate"></img>
-                            <h1>Double Chocolate</h1>
+                        <img src={sum12} alt="12"></img>
+                            <h1 className={styles.count}>12</h1>
+                            <h1 className={styles.price}>$30</h1>  
                         </div>
                     </Link>
                 </div>
-                <div className={glazeStyles.navigationFooter}>
-                    <Link to={`/order/${props.match.params.type}`}>
+                <div className={styles.navigationFooter}>
+                    <Link to={`/order/${props.match.params.type}/glaze`}>
                         <button>{`${`<-- Back`}`}</button>
                     </Link>
-                    {/* <Link to={`/order/${props.match.params.type}/glaze`}>
-                        <button>{`${`Next -->`}`}</button>
-                    </Link> */}
+                    <Link to={`/order/${props.match.params.type}/glaze`}>
+                        <button>{`${`Add to Bag`}`}</button>
+                    </Link>
                 </div>
             </div>
         </div>

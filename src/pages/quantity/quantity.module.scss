@@ -1,0 +1,58 @@
+.fullPage {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 106px;
+      }
+
+    .heading {
+        margin-top: 50px;
+        font-family: Itim;
+        font-size: 6em;
+    }
+
+    .row {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        .listItem {
+            height: min-content;
+            margin: 50px 50px 0px 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 200px;
+            }
+
+            h1 {
+                font-family: Gloria Hallelujah;
+            }
+        }
+    }
+}
+
+.navigationFooter {
+    left: 0;
+    bottom: 0;
+    margin-bottom: 50px;
+    padding: 0 100px;
+    position: absolute;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+}
