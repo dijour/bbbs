@@ -13,41 +13,36 @@ import $ from 'cash-dom';
 const Index = () => {
 
     useEffect(() => {
-
-        TweenMax.set("#content", { autoAlpha: 1, xPercent: 0 });
-
-    const page = document.querySelectorAll("#content");
-    const listItem = document.querySelectorAll("a");
-    let indexTimeline = new TimelineMax();
-    
-    console.log(listItem)
-
-    listItem.forEach.call(listItem, function(el) {
-      el.addEventListener("mouseover", function(e) {
-        let thisItem = this.getAttribute("id");
-        if (thisItem) {
-            let imageItem = (this.childNodes[0].childNodes[0].getAttribute("id"));
-            if (imageItem) {
-               let randomRotation = Math.floor(Math.random() * 200) - 40;
-               (TweenMax.to(`#${imageItem}`, .3, {rotation: randomRotation, ease: Power2.easeIn}));
-            }
-        }
-
-      });
-    });
-    
-    listItem.forEach.call(listItem, function(el) {
-      el.addEventListener("mouseout", function(e) {
-        let thisItem = this.getAttribute("id");
-        if (thisItem) {
-            let imageItem = (this.childNodes[0].childNodes[0].getAttribute("id"));
-            if (imageItem) {
-               (TweenMax.to(`#${imageItem}`, 1, { rotation: 0, ease: Elastic.easeOut }));
-            }
-        }
-      });
-    });
         // Setup animations
+        TweenMax.set("#content", { autoAlpha: 1, xPercent: 0 });
+        const listItem = document.querySelectorAll("a");
+        let indexTimeline = new TimelineMax();
+        
+        listItem.forEach.call(listItem, function(el) {
+            el.addEventListener("mouseover", function(e) {
+                let thisItem = this.getAttribute("id");
+                if (thisItem) {
+                    let imageItem = (this.childNodes[0].childNodes[0].getAttribute("id"));
+                    if (imageItem) {
+                    let randomRotation = Math.floor(Math.random() * 200) - 40;
+                    (TweenMax.to(`#${imageItem}`, .3, {rotation: randomRotation, ease: Power2.easeIn}));
+                    }
+                }
+            });
+        });
+        
+        listItem.forEach.call(listItem, function(el) {
+            el.addEventListener("mouseout", function(e) {
+                let thisItem = this.getAttribute("id");
+                if (thisItem) {
+                    let imageItem = (this.childNodes[0].childNodes[0].getAttribute("id"));
+                    if (imageItem) {
+                    (TweenMax.to(`#${imageItem}`, 1, { rotation: 0, ease: Elastic.easeOut }));
+                    }
+                }
+            });
+        });
+
         let tweenImg1 = new TweenMax.fromTo('#img1', 3, { y: (-100), rotation: -30, opacity: 0, ease: Elastic.easeIn }, { y: (0), rotation: 0, opacity: 1, ease: Elastic.easeOut });
         let tweenImg2 = new TweenMax.fromTo('#img2', 3, { y: (-100), rotation: -70, opacity: 0, ease: Elastic.easeIn }, { y: (0), rotation: 0, opacity: 1, ease: Elastic.easeOut });
         let tweenImg3 = new TweenMax.fromTo('#img3', 3, { y: (-100), rotation: -20, opacity: 0, ease: Elastic.easeIn }, { y: (0), rotation: 0, opacity: 1, ease: Elastic.easeOut });

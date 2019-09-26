@@ -1,0 +1,23 @@
+.fullPage {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .content {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 106px;
+
+        h1 {
+            font-family: Itim;
+            font-size: 5em;
+            letter-spacing: 0.08em;
+        }
+      }
+}

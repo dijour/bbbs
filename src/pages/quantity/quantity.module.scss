@@ -25,6 +25,7 @@
         display: flex;
         justify-content: center;
         align-items: flex-end;
+        flex-wrap: wrap;
 
         .listItem {
             height: min-content;
@@ -36,6 +37,7 @@
 
             img {
                 max-width: 200px;
+                transition: .4s;
             }
 
             h1 {
@@ -55,4 +57,23 @@
     justify-content: space-between;
     display: flex;
     width: 100%;
+}
+
+.disabled {
+    background-color: grey;
+}
+
+.padding {
+    height: 200px;
+}
+
+.buttonRow {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    a {
+        margin: 20px;
+    }
 }

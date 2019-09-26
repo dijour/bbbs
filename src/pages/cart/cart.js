@@ -1,28 +1,22 @@
 import React, {useState, useEffect} from 'react';
+import styles from './cart.module.scss';
 
 const Cart = () => {
-    const [age, setAge] = useState(19)
-    const [siblingsNum, setSiblingsNum] = 
-        useState(10)
 
-    const handleAge = () => setAge(age + 1)
-    const handleSiblingsNum = () => 
-        setSiblingsNum(siblingsNum + 1)
-
+    let initial = localStorage.getItem('cart');
+    let num = 0;
+    if (initial !== null) {
+        num = (JSON.parse(initial).length)
+    }
 
     return (
-        <div>
-        <p>Today I am {age} Years of Age</p>
-        <p>I have {siblingsNum} siblings</p>
-
-        <div>
-            <button onClick={handleAge}>
-            Get older! 
-            </button>
-            <button onClick={handleSiblingsNum}>
-                More siblings! 
-            </button>
-        </div>
+        <div className={styles.fullPage}>
+            <div className={styles.content}>
+                <h1>{num} Items in Your Cart</h1>
+                <h1>iF i HaD tHe EnErGy tO aCtUaLlY mAkE tHiS cArT wOrK</h1>
+                <h1>it would be cool</h1>
+                <h1>for now just pretend it works</h1>
+            </div>
         </div>
     )
 }

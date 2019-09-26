@@ -6,6 +6,12 @@ import bag from '../../src/assets/bag.svg'
 import { withRouter, Link } from "react-router-dom";
 
 const Nav = (props) => {
+    let initial = localStorage.getItem('cart');
+    let initialCount
+    if (initial !== null) {
+        initialCount = (JSON.parse(initial).length)
+    }
+
     return (
         <div className={styles.nav}>
             <div className={styles.leftBlock}>
@@ -17,8 +23,11 @@ const Nav = (props) => {
                 <Link to={"/order"}>
                     <img src={order} className={props.location.pathname === "/order" ? styles.active : ""}  alt="order"/>
                 </Link>      
-                <Link to={"/bag"}>
-                    <img src={bag} className={props.location.pathname === "/bag" ? styles.active : ""}  alt="shopping-bag"/>
+                <Link to={"/cart"}>
+                    <div className={styles.centerAlign}>
+                        <img src={bag} className={props.location.pathname === "/bag" ? styles.active : ""}  alt="shopping-bag"/>
+                        <h1>{initialCount}</h1>
+                    </div>
                 </Link>
             </div>
         </div>

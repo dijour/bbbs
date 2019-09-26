@@ -7,12 +7,10 @@ import original from '../../assets/original.svg'
 import pumpkin from '../../assets/pumpkin-spice.svg'
 
 import { Link } from "react-router-dom";
-import {TweenMax, Bounce, TimelineMax} from "gsap/TweenMax";
+import {TweenMax, Bounce, Elastic, TimelineMax} from "gsap/TweenMax";
 
 
 const Show = (props) => {
-    // console.log(props.match.params.type)
-
     let map = {
         "blackberry" : blackberry,
         "walnut" : walnut,
@@ -29,9 +27,9 @@ const Show = (props) => {
         let showTimeline = new TimelineMax();
         let tweenImg = new TweenMax.fromTo('#bun', 0.3, { transform: 'translateY(40px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 });
         let tweenText = new TweenMax.fromTo('#description', 0.3, { transform: 'translateY(40px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 });        
-        let tweenBack = new TweenMax.fromTo('#back', 1, { transform: 'translateX(60px)', opacity: 0 }, { transform: 'translateY(0)', ease: Bounce.easeOut, opacity: 1 });        
-        let tweenNext = new TweenMax.fromTo('#next', 1, { transform: 'translateX(-60px)', opacity: 0 }, { transform: 'translateY(0)', ease: Bounce.easeOut, opacity: 1 });        
-        showTimeline.add(tweenImg, 0.3).add(tweenText, .7).add(tweenBack, 1).add(tweenNext, 1.8)
+        let tweenBack = new TweenMax.fromTo('#back', .7, { transform: 'translateX(60px)', opacity: 0 }, { transform: 'translateY(0)', ease: Elastic.easeOut, opacity: 1 });        
+        let tweenNext = new TweenMax.fromTo('#next', .7, { transform: 'translateX(-60px)', opacity: 0 }, { transform: 'translateY(0)', ease: Elastic.easeOut, opacity: 1 });        
+        showTimeline.add(tweenImg, 0.3).add(tweenText, .7).add(tweenBack, 1).add(tweenNext, 1)
 	}, [])
 
     return (
@@ -59,7 +57,7 @@ const Show = (props) => {
                         <button>{`${`<-- Back`}`}</button>
                     </Link>
                     <Link id="next" to={`/order/${props.match.params.type}/glaze`}>
-                        <button>{`${`Next -->`}`}</button>
+                        <button>{`${`Glaze it up!`}`}</button>
                     </Link>
                 </div>
             </div>

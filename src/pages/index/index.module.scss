@@ -7,6 +7,8 @@
     flex-direction: column;
     align-items: center;
 
+    cursor: url('../../assets/bun.png'), auto;	
+
     .content {
         display: flex; 
         flex-direction: column;
@@ -19,25 +21,15 @@
         margin-top: 50px;
         font-family: Itim;
         font-size: 6em;
+        text-align: center;
     }
 
     .box {
-        // &:hover a:hover {
-        //     img {
-        //         opacity: 1;
-        //     }
-        //   }
-        
-        // &:hover a:not(:hover) {
-        //     opacity: 0.3;
-        //     img {
-        //         opacity:0.3;
-        //     }
-        // }
         .row {
             display: flex;
             justify-content: center;
             align-items: flex-end;
+            flex-wrap: wrap;
 
             a {
                 text-decoration: none;
@@ -50,11 +42,6 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                // &:hover {
-                //     animation: float 1s;
-                // }
-
-                // transition: margin-bottom 1s;
 
                 img {
                     max-width: 200px;
@@ -67,22 +54,3 @@
         }
     }
 }
-
-// @keyframes float {
-//     from {
-//         // margin-top: 50px;
-//         // width: 100%; 
-//     }
-  
-//     to {
-//         // position: absolute;
-//         // display: inline-table;
-//         // margin-top: 100px;
-//         margin-bottom: 30px;
-//         // padding: px;
-//         // max-width: 300px;
-//         // width: 150%;
-//         // height: 150%
-//     }
-//   }
-
