@@ -11,6 +11,7 @@ import {TweenMax, Elastic, TimelineMax} from "gsap/TweenMax";
 
 
 const Show = (props) => {
+    // create dictionary to map strings to their image src counterparts
     let map = {
         "blackberry" : blackberry,
         "walnut" : walnut,
@@ -22,6 +23,7 @@ const Show = (props) => {
 
     let image = map[props.match.params.type]
 
+    //animate in all images
     useEffect(() => {
         // Setup animations
         let showTimeline = new TimelineMax();

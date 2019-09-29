@@ -12,15 +12,16 @@ import { Link } from "react-router-dom";
 
 
 const Glaze = (props) => {
-
     const [glaze, setGlaze] = useState();
 
+    //onchange handler for glaze images
     const onChange = (event, type) => {
         event.preventDefault();
         setGlaze(type);
 
     }
 
+    // animate in images
     useEffect(() => {
         let glazeTimeline = new TimelineMax()
         let tweenImg1 = new TweenMax.fromTo('#img1', 3, { y: (-100), rotation: -30, opacity: 0, ease: Elastic.easeIn }, { y: (0), rotation: 0, opacity: 1, ease: Elastic.easeOut });

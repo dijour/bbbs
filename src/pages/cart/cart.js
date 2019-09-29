@@ -3,6 +3,7 @@ import styles from './cart.module.scss';
 
 const Cart = () => {
 
+    // get info from local storage
     let initial = localStorage.getItem('cart');
     let num = 0;
     if (initial !== null) {

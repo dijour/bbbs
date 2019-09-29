@@ -12,6 +12,7 @@ import Nav from '../src/components/nav.js';
 function App() {
   return (
     <div className="App">
+      {/* main app - wrapped in a router */}
       <Router>
         <Nav/>
         <Route path="/" exact component={Home} />

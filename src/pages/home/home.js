@@ -5,8 +5,9 @@ import {TweenMax, Elastic, TimelineMax} from "gsap/TweenMax";
 
 
 const Home = () => {
+
+    // Setup animations
     useEffect(() => {
-        // Setup animations
         let mainTimeline = new TimelineMax();
         let tweenText = new TweenMax.fromTo('h1', 0.2, { transform: 'translateY(40px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 });
         let tweenButton = new TweenMax.fromTo('#order-now', 1, { transform: 'translateY(40px)', ease: Elastic.easeIn, opacity: 0 }, { transform: 'translateY(0)', ease: Elastic.easeOut, opacity: 1 });

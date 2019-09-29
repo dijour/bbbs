@@ -11,12 +11,14 @@ import {TweenMax, Power2, Elastic, TimelineMax} from "gsap/TweenMax";
 
 const Index = () => {
 
+    // animates in all pics
     useEffect(() => {
         // Setup animations
         TweenMax.set("#content", { autoAlpha: 1, xPercent: 0 });
         const listItem = document.querySelectorAll("a");
         let indexTimeline = new TimelineMax();
         
+        // listens for user interaction - gives item a random rotation
         listItem.forEach.call(listItem, function(el) {
             el.addEventListener("mouseover", function(e) {
                 let thisItem = this.getAttribute("id");
@@ -30,6 +32,7 @@ const Index = () => {
             });
         });
         
+        // listens for end of user interaction
         listItem.forEach.call(listItem, function(el) {
             el.addEventListener("mouseout", function(e) {
                 let thisItem = this.getAttribute("id");

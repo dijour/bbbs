@@ -10,12 +10,14 @@ import { Link } from "react-router-dom";
 
 
 const Quantity = (props) => {
+    //set up useState vars
     const [quantity, setQuantity] = useState()
     const [cost, setCost] = useState()
     const [count, setCount] = useState(0)
     const [oldImg, setOldImg] = useState()
     const [newImg, setNewImg] = useState() 
 
+    // custom object with the customer's order up until quantity selection
     let order = {
         "type": props.match.params.type, 
         "glaze": props.match.params.glaze, 
@@ -23,6 +25,7 @@ const Quantity = (props) => {
         "cost": ""
     }
 
+    // animate in all images
     useEffect(() => {
         let glazeTimeline = new TimelineMax()
         let tweenImg1 = new TweenMax.fromTo('#img1', 3, { x: (-100), y: (-100), rotation: -30, opacity: 0, ease: Elastic.easeIn }, { x: (0), y: (0), rotation: 0, opacity: 1, ease: Elastic.easeOut });
@@ -32,11 +35,13 @@ const Quantity = (props) => {
         glazeTimeline.add(tweenImg1, .2).add(tweenImg2, .4).add(tweenImg3, .6).add(tweenImg4, .8)
     }, [])
 
+    // update order object with new quantity and total cost
     useEffect(() => {
         order.quantity = quantity;
         order.cost = cost;
     }, [order, quantity, cost])
 
+    // function to switch selected quantity
     const alterQuantity = (e, quantitee, kost) => {
         setOldImg(newImg)
         setNewImg(e.target)
@@ -44,6 +49,7 @@ const Quantity = (props) => {
         setCost(kost)
     }
 
+    // update each image once selected to add border
     useEffect(() => {
         if (oldImg) {
             oldImg.style.border = "none"
@@ -53,6 +59,7 @@ const Quantity = (props) => {
         }
     }, [oldImg, newImg])
 
+    // adds stringified order to local storage
     const setCart = (e) => {
         if (!quantity) {
             return

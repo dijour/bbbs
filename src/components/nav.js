@@ -6,6 +6,8 @@ import bag from '../../src/assets/bag.svg'
 import { withRouter, Link } from "react-router-dom";
 
 const Nav = (props) => {
+
+    //getting initial cart state from local storage
     let initial = localStorage.getItem('cart');
     let initialCount = 0;
     if (initial !== null) {
