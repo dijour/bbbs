@@ -7,7 +7,7 @@ import { withRouter, Link } from "react-router-dom";
 
 const Nav = (props) => {
     let initial = localStorage.getItem('cart');
-    let initialCount
+    let initialCount = 0;
     if (initial !== null) {
         initialCount = (JSON.parse(initial).length)
     }
