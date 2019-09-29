@@ -16,6 +16,8 @@
     }
 
     .centerAlign{
+        margin-top: -4px;
+        transition: .2s ease;
         h1 {
             position: relative;
             margin-top: -60px;
@@ -24,10 +26,14 @@
     }
 
     img {
+        transition: .2s ease;
         &:first-of-type {
             margin-left: 20px;
         }
         margin-right: 20px;
+    }
+
+    .hoverable {
         &:hover{
             border-bottom: 4px solid blue;
             transition: .2s ease;

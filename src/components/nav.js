@@ -15,17 +15,17 @@ const Nav = (props) => {
     return (
         <div className={styles.nav}>
             <div className={styles.leftBlock}>
-                <Link to={"/"}>
-                    <img src={roll} className={props.location.pathname === "/" ? styles.active : ""} alt="cinnamon-roll"/>
+                <Link className={props.location.pathname === "/" ? styles.active : styles.hoverable} to={"/"}>
+                    <img src={roll} alt="cinnamon-roll"/>
                 </Link>  
             </div>
             <div className={styles.rightBlock}>
-                <Link to={"/order"}>
-                    <img src={order} className={props.location.pathname === "/order" ? styles.active : ""}  alt="order"/>
+                <Link className={props.location.pathname === "/order" ? styles.active : styles.hoverable} to={"/order"}>
+                    <img src={order}   alt="order"/>
                 </Link>      
-                <Link to={"/cart"}>
+                <Link className={props.location.pathname === "/bag" ? styles.active : styles.hoverable} to={"/cart"}>
                     <div className={styles.centerAlign}>
-                        <img src={bag} className={props.location.pathname === "/bag" ? styles.active : ""}  alt="shopping-bag"/>
+                        <img src={bag}  alt="shopping-bag"/>
                         <h1>{initialCount}</h1>
                     </div>
                 </Link>

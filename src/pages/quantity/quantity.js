@@ -118,7 +118,7 @@ const Quantity = (props) => {
                             <button>{`${`Start Over`}`}</button>
                         </Link>
                         <Link onClick={(e) => setCart(e)}>
-                            <button>{`${`Add More`}`}</button>
+                            <button>{`${`Add Again`}`}</button>
                         </Link>
                         <Link to={`/cart`}>
                             <button>{`${`Go to Cart`}`}</button>
