@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import styles from '../index/index.module.scss';
+import classNames from 'classnames';
 import glazeStyles from './glaze.module.scss';
 import none from '../../assets/original.svg';
 import sugar from '../../assets/sugar-glaze.svg';
@@ -11,6 +12,14 @@ import { Link } from "react-router-dom";
 
 
 const Glaze = (props) => {
+
+    const [glaze, setGlaze] = useState();
+
+    const onChange = (event, type) => {
+        event.preventDefault();
+        setGlaze(type);
+
+    }
 
     useEffect(() => {
         let glazeTimeline = new TimelineMax()
@@ -27,35 +36,37 @@ const Glaze = (props) => {
             <div className={styles.content}>
                 <div className={styles.heading}>What <u>glaze</u> would you like?</div>
                 <div className={glazeStyles.row}>
-                    <Link id="img1" to={`/order/${props.match.params.type}/none/quantity`}>
-                        <div className={glazeStyles.listItem}>
-                            <img src={none} alt="none"></img>
-                            <h1>None</h1>
-                        </div>
-                    </Link>   
-                    <Link id="img2" to={`/order/${props.match.params.type}/vanilla/quantity`}>
-                        <div className={glazeStyles.listItem}>
+                    <div id="img1" onClick={e => onChange(e, "none")} className={classNames(glazeStyles.listItem, `${glaze === "none" ? glazeStyles.selected : ""}`)}>
+                        <img src={none} alt="none"></img>
+                        <h1>None</h1>
+                    </div>
+                    <div id="img2" onClick={e => onChange(e, "vanilla")} className={classNames(glazeStyles.listItem, `${glaze === "vanilla" ? glazeStyles.selected : ""}`)}>
                         <img src={vanilla} alt="vanilla"></img>
-                            <h1>Vanilla Milk</h1>
-                        </div>
-                    </Link>
-                    <Link id="img3" to={`/order/${props.match.params.type}/sugar/quantity`}>
-                        <div className={glazeStyles.listItem}>
-                        <img src={sugar} alt="sugar-milk"></img>
-                            <h1>Sugar Milk</h1>
-                        </div>
-                    </Link>
-                    <Link id="img4" to={`/order/${props.match.params.type}/chocolate/quantity`}>
-                        <div className={glazeStyles.listItem}>
+                        <h1>Vanilla Milk</h1>
+                    </div>
+                    <div id="img3" onClick={e => onChange(e, "sugar")} className={classNames(glazeStyles.listItem, `${glaze === "sugar" ? glazeStyles.selected : ""}`)}>
+                        <img src={sugar} alt="sugar"></img>
+                        <h1>Sugar Milk</h1>
+                    </div>
+                    <div id="img4" onClick={e => onChange(e, "chocolate")} className={classNames(glazeStyles.listItem, `${glaze === "chocolate" ? glazeStyles.selected : ""}`)}>
                         <img src={chocolate} alt="chocolate"></img>
-                            <h1>Double Chocolate</h1>
-                        </div>
-                    </Link>
+                        <h1>Double Chocolate</h1>
+                    </div>
                 </div>
                 <div className={glazeStyles.navigationFooter}>
                     <Link to={`/order/${props.match.params.type}`}>
                         <button>{`${`<-- Back`}`}</button>
                     </Link>
+                    <div>
+                        { glaze ?
+                            <Link to={`/order/${props.match.params.type}/${glaze}/quantity`}>
+                                <button className={glaze !== undefined ? glazeStyles.active : glazeStyles.disabled }>{`${`How many?`}`}</button>
+                            </Link>
+                        :
+                            <button className={glaze !== undefined ? glazeStyles.active : glazeStyles.disabled }>{`${`How many?`}`}</button>
+                        }
+                    </div>
+
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import styles from './nav.module.scss';
 import roll from '../../src/assets/cr.svg'
 import order from '../../src/assets/order.svg'

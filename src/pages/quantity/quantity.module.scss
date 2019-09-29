@@ -16,9 +16,9 @@
       }
 
     .heading {
-        margin-top: 50px;
-        font-family: Itim;
-        font-size: 6em;
+        font-family: Gloria Hallelujah;
+        margin-top: 30px;
+        font-size: 4em;
     }
 
     .row {
@@ -35,9 +35,28 @@
             justify-content: center;
             align-items: center;
 
+            &:hover {
+                img {
+                    transition: ease .5s; /* vendorless fallback */
+
+                    &:hover {
+                        box-shadow: 20px 20px 40px rgba(247, 142, 21, 0.541);
+                        margin: 0;
+                        transition: ease .5s; /* vendorless fallback */        
+                    }
+                }
+        
+            }
+        
+            img {
+                transition: .5s;
+                max-width: 200px;
+            }
+
             img {
                 max-width: 200px;
                 transition: .4s;
+                cursor: pointer;
             }
 
             h1 {
@@ -61,6 +80,12 @@
 
 .disabled {
     background-color: grey;
+
+    &:hover {
+        box-shadow: none;
+        margin: 0;
+        transition: ease .5s; /* vendorless fallback */      
+    }
 }
 
 .padding {

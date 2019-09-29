@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import styles from './cart.module.scss';
 
 const Cart = () => {
@@ -11,11 +11,23 @@ const Cart = () => {
 
     return (
         <div className={styles.fullPage}>
-            <div className={styles.content}>
-                <h1>{num} Items in Your Cart</h1>
-                <h1>iF i HaD tHe EnErGy tO aCtUaLlY mAkE tHiS cArT wOrK</h1>
-                <h1>it would be cool</h1>
-                <h1>for now just pretend it works</h1>
+            <div className={styles.leftBox}>
+                <h1>{num} Item{num > 1 ? "s" : ""} in Your Cart</h1>
+            </div>
+            <div className={styles.rightBox}>
+                <h3><u>Checkout</u></h3>
+                <hr/>
+                <h3>Registered Users</h3>
+                <div className={styles.login}>
+                    <label>Email</label>
+                    <input type="text" label="Email"/>
+                    <label>Password</label>                    
+                    <input type="password" label="Password"/>
+                </div>
+                <button>Sign in + Checkout</button>
+                <hr></hr>
+                <h3>New Customers</h3>               
+                <button>Create Account</button>
             </div>
         </div>
     )

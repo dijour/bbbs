@@ -1,9 +1,7 @@
-import React, {useState, useEffect} from 'react';
-import bg from '../../assets/bg.svg'
-import styles from './home.module.scss'
-import { withRouter, Link } from "react-router-dom";
+import React, {useEffect} from 'react';
+import styles from './home.module.scss';
+import { Link } from "react-router-dom";
 import {TweenMax, Elastic, TimelineMax} from "gsap/TweenMax";
-import $ from 'cash-dom';
 
 
 const Home = () => {

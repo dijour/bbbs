@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, { useEffect} from 'react';
 import styles from './show.module.scss';
 import walnut from '../../assets/walnut.svg'
 import blackberry from '../../assets/blackberry.svg'
@@ -7,7 +7,7 @@ import original from '../../assets/original.svg'
 import pumpkin from '../../assets/pumpkin-spice.svg'
 
 import { Link } from "react-router-dom";
-import {TweenMax, Bounce, Elastic, TimelineMax} from "gsap/TweenMax";
+import {TweenMax, Elastic, TimelineMax} from "gsap/TweenMax";
 
 
 const Show = (props) => {

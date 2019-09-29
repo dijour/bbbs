@@ -2,8 +2,17 @@ html {
   box-sizing: border-box;
   background: white;
   overflow: hidden;
+  font-family: Gloria Hallelujah;
 }
 
 *, *:before, *:after {
   box-sizing: border-box
+}
+
+button {
+  &:hover {
+      box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.25);
+      margin: 0;
+      transition: ease .5s; /* vendorless fallback */        
+  }
 }

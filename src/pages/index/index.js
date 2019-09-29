@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useEffect} from 'react';
 import styles from './index.module.scss';
 import walnut from '../../assets/walnut.svg'
 import blackberry from '../../assets/blackberry.svg'
@@ -6,9 +6,8 @@ import caramelPecan from '../../assets/caramel-pecan.svg'
 import original from '../../assets/original.svg'
 import pumpkin from '../../assets/pumpkin-spice.svg'
 
-import { withRouter, Link } from "react-router-dom";
-import {TweenMax, Sine, Power2, Bounce, Elastic, TimelineMax} from "gsap/TweenMax";
-import $ from 'cash-dom';
+import { Link } from "react-router-dom";
+import {TweenMax, Power2, Elastic, TimelineMax} from "gsap/TweenMax";
 
 const Index = () => {
 

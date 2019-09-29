@@ -14,9 +14,7 @@ const Quantity = (props) => {
     const [cost, setCost] = useState()
     const [count, setCount] = useState(0)
     const [oldImg, setOldImg] = useState()
-    const [newImg, setNewImg] = useState()
-    const [popup, setPopup] = useState(false)
-    
+    const [newImg, setNewImg] = useState() 
 
     let order = {
         "type": props.match.params.type, 
