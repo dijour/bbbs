@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Bonus enhancements
 1. Service worker for offline storage and local caching.
 2. Local storage enables shopping-cart persistence. Close the tab, reopen it, and see that your cart maintains its state.
